@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figure Shop - Головна та Каталог</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">FIGURE <span>UA</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#" id="home-link">Головна</a></li>
+                    <li><a href="#" id="catalog-link">Каталог</a></li>
+                    <li><a href="#" id="cart-button">🛒 Кошик (<span id="cart-count">0</span>)</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+
+    <section id="home-page" class="hero">
+        <div class="hero-content">
+            <h1>Світ колекційних фігурок №1 в Україні</h1>
+            <p>Від ексклюзивних аніме-героїв до легендарних персонажів Marvel. Доставка по всьому світу!</p>
+            <button id="go-to-catalog" class="cta-button">Перейти до каталогу</button>
+        </div>
+        <div class="hero-image">
+            <img src="https://i.postimg.cc/50cHbBT9/figurki.jpg" alt="Main Figure">
+        </div>
+    </section>
+
+    <section id="catalog-page" style="display: none;">
+        <h2 class="section-title">Наші фігурки</h2>
+        <div class="category-filters">
+            <button class="filter-btn active" onclick="filterCategory('All')">Всі</button>
+            <button class="filter-btn" onclick="filterCategory('Anime')">Anime</button>
+            <button class="filter-btn" onclick="filterCategory('Marvel')">Marvel</button>
+            <button class="filter-btn" onclick="filterCategory('Games')">Games</button>
+            <button class="filter-btn" onclick="filterCategory('Star Wars')">Star Wars</button>
+            <button class="filter-btn" onclick="filterCategory('Cartoon')">Cartoon</button>
+        </div>
+
+        <div id="product-container" class="product-grid">
+            </div>
+        <div id="product-container" class="product-grid">
+            </div>
+    </section>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Ваш кошик</h2>
+            <button id="close-cart">×</button>
+        </div>
+        <div id="cart-items" class="cart-items-container"></div>
+        <div class="cart-footer">
+            <div class="total-price">Разом: <span id="cart-total">0</span> грн</div>
+            <button class="checkout-btn" onclick="openPayment()">ПЕРЕЙТИ ДО ОПЛАТИ</button>
+        </div>
+    </div>
+    <div id="cart-overlay" class="cart-overlay"></div>
+
+    <audio id="cart-sound" src="img/sounds/bay-coshik.mp3" preload="auto"></audio>
+    <audio id="transition-sound" src="img/sounds/global-perehod.mp3" preload="auto"></audio>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Figure UA. Всі права захищені. Магазин колекційних фігурок №1.</p>
+    </footer>
+
+    <div id="payment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Оформлення замовлення</h2>
+            <form id="payment-form">
+                <div class="input-group">
+                    <label>Ім'я та Прізвище</label>
+                    <input type="text" placeholder="Іван Іванов" required>
+                </div>
+                <div class="input-group">
+                    <label>Номер карти</label>
+                    <input type="text" placeholder="0000 0000 0000 0000" maxlength="16" required>
+                </div>
+                <div class="row">
+                    <div class="input-group">
+                        <label>Термін дії</label>
+                        <input type="text" placeholder="ММ/РР" maxlength="5" required>
+                    </div>
+                    <div class="input-group">
+                        <label>CVV</label>
+                        <input type="password" placeholder="123" maxlength="3" required>
+                    </div>
+                </div>
+                <button type="submit" class="pay-button">Підтвердити оплату</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js" defer></script>
+</body>
+</html>

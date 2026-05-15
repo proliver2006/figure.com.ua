@@ -1,0 +1,657 @@
+/* Загальні стилі */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: #222;
+    color: white;
+}
+/* --- СУЧАСНА ШАПКА --- */
+.main-header {
+    background-color: #171a21; /* Глибокий темний колір */
+    padding: 15px 0;
+    position: sticky; /* Шапка "прилипає" до верху при скролі */
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    border-bottom: 1px solid #333;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between; /* Лого зліва, меню справа */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Стиль Логотипу */
+.logo {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.logo span {
+    color: rgb(255, 166, 0); /* Помаранчевий акцент */
+}
+
+/* Навігація */
+.main-header nav ul {
+    display: flex;
+    list-style: none; /* Прибираємо крапки списку */
+    margin: 0;
+    padding: 0;
+    gap: 30px; /* Відстань між пунктами меню */
+}
+
+.main-header nav ul li a {
+    text-decoration: none;
+    color: #ccc;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: 0.3s;
+    position: relative;
+}
+
+/* Ефект підкреслення при наведенні */
+.main-header nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: orange;
+    transition: 0.3s;
+}
+
+.main-header nav ul li a:hover {
+    color: white;
+}
+
+.main-header nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Особливий стиль для кнопки кошика */
+.cart-nav-btn {
+    background: rgba(255, 165, 0, 0.1);
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 165, 0, 0.3);
+}
+
+.cart-nav-btn:hover {
+    background: rgb(255, 255, 255) !important;
+    color: white !important;
+}/* --- СУЧАСНА ШАПКА --- */
+.main-header {
+    background-color: #171a21; /* Глибокий темний колір */
+    padding: 15px 0;
+    position: sticky; /* Шапка "прилипає" до верху при скролі */
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(30, 30, 30, 0.5);
+    border-bottom: 1px solid #212121;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between; /* Лого зліва, меню справа */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Стиль Логотипу */
+.logo {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.logo span {
+    color: rgb(255, 166, 0); /* Помаранчевий акцент */
+}
+
+/* Навігація */
+.main-header nav ul {
+    display: flex;
+    list-style: none; /* Прибираємо крапки списку */
+    margin: 0;
+    padding: 0;
+    gap: 10px; /* Відстань між пунктами меню */
+}
+
+.main-header nav ul li a {
+    text-decoration: none;
+    color: #ccc;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: 0.3s;
+    position: relative;
+}
+
+/* Ефект підкреслення при наведенні */
+.main-header nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: orange;
+    transition: 0.3s;
+}
+
+.main-header nav ul li a:hover {
+    color: white;
+}
+
+.main-header nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Особливий стиль для кнопки кошика */
+.cart-nav-btn {
+    background: rgba(255, 165, 0, 0.1);
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 165, 0, 0.3);
+}
+
+.cart-nav-btn:hover {
+    background: orange !important;
+    color: white !important;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+/* Стилі Головної сторінки */
+/* --- ПОВЕРНЕННЯ ДО КЛАСИЧНОГО ВИГЛЯДУ (Текст зліва, Картинка справа) --- */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 300px 7%; /* Повертаємо нормальні відступи від країв екрана */
+    background: linear-gradient(135deg, #000000 0%, #fff58b 300%);
+    color: rgb(255, 255, 255);
+    min-height: 80vh;
+    gap: 50px;
+}
+
+/* Блок з текстом */
+.hero-content {
+    flex: 1;
+    text-align: left; /* Вирівнювання по лівому краю */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Кнопка теж зліва */
+}
+
+.hero-content h1 {
+    
+    font-size: 2.5rem;
+    color: rgb(255, 166, 0);
+    margin-bottom: 20px;
+    -webkit-text-stroke: 0.3px rgb(0, 0, 0); /* Товщина та колір контуру */
+    text-shadow: 5px 7px 8px rgba(0, 0, 0, 0.8);
+}
+
+.hero-content p {
+    max-width: 650px;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    text-shadow: 5px 7px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* Блок з картинкою */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    
+    width: 100%;
+    height: 800px;
+    border-radius: 15px; /* Повертаємо гарні закруглені кути */
+    box-shadow: 10px 20px 50px rgba(142, 132, 20, 0.5); /* Додаємо тінь для об'єму */
+    margin-left: 1050px;  /* Відштовхує від лівого краю (рух вправо) */
+    margin-top: -500px;  /* Піднімає вгору */
+}
+
+/* Кнопка */
+.cta-button {
+    background: rgb(255, 166, 0);
+    color: white;
+    padding: 15px 35px;
+    text-shadow: 1px 2px 2px rgba(63, 63, 63, 0.8);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.cta-button:hover {
+    background: hsl(39, 100%, 50%);
+    transform: translateY(-3px);
+}
+
+/* Адаптивність: на телефонах картинка буде під текстом */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%;
+    }
+    .hero-content {
+        align-items: center;
+    }
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+}
+
+/* --- СТИЛІ КАТАЛОГУ (СУЧАСНИЙ ДИЗАЙН) --- */
+
+#catalog-page {
+    background: linear-gradient(135deg, #000000 0%, #6c6e5a 100%); /* Темний фон, як на головній */
+    padding: 60px 5%;
+    min-height: 100vh;
+}
+
+.section-title {
+    text-align: center;
+    color: rgb(255, 170, 0); /* Помаранчевий заголовок */
+    font-size: 3rem;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 10px rgba(255, 165, 0, 0.3);
+}
+
+/* Сітка товарів */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Картка товару */
+.product-card {
+    background: #232323; /* Темно-сірий фон картки */
+    border: 1px solid #333;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.4s ease; /* Плавна анімація */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ефект при наведенні на картку */
+.product-card:hover {
+    transform: translateY(-10px); /* Підстрибує вгору */
+    border-color: orange;
+    box-shadow: 0 10px 30px rgba(255, 165, 0, 0.2);
+}
+
+/* Зображення в картці */
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain; /* Щоб фігурку було видно повністю */
+    border-radius: 15px;
+    margin-bottom: 15px;
+    background: #1e1e1e; /* Легкий фон під картинкою */
+}
+
+/* Назва товару */
+.product-card h3 {
+    color: rgb(255, 255, 255);
+    font-size: 1.4rem;
+    margin: 10px 0;
+}
+
+/* Категорія */
+.category {
+    color: #a5a5a5;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* Ціна */
+.price {
+    color: orange;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+/* Кнопка "Купити" всередині картки */
+.buy-btn {
+    background: transparent;
+    color: orange;
+    border: 2px solid orange;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.buy-btn:hover {
+    background: orange;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 15px orange;
+}
+
+/* Кошик */
+
+/* Стилі Кошика */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -400px; /* Спочатку захований */
+    width: 350px;
+    height: 100%;
+    background: #1b2838; /* Колір Steam */
+    color: white;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+    transition: 0.3s;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-sidebar.active {
+    right: 0;
+}
+
+.cart-header {
+    padding: 20px;
+    background: #171a21;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#close-cart {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.cart-items-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+/* Елемент товару в кошику */
+.cart-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #3d4450;
+}
+
+.cart-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.cart-item-info h4 {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.cart-item-info p {
+    color: orange;
+    margin: 5px 0;
+}
+
+.remove-item {
+    background: none;
+    border: none;
+    color: #888;
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-decoration: underline;
+}
+
+.cart-footer {
+    padding: 20px;
+    background: #171a21;
+}
+
+.total-price {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    text-align: right;
+}
+
+.checkout-btn {
+    width: 100%;
+    background: linear-gradient(to bottom, #75b022 5%, #588a1b 95%); /* Зелена кнопка як у Steam */
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Напівпрозорий фон при відкритті кошика */
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: none;
+    z-index: 999;
+}
+
+.cart-overlay.active {
+    display: block;
+}
+/* --- СТИЛІ ДЛЯ КНОПОК ФІЛЬТРІВ --- */
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+    flex-wrap: wrap; /* Щоб кнопки переносилися на мобільних */
+}
+
+.filter-btn {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    border: 2px solid rgb(255, 154, 2);
+    margin-top: 0px !important; /* Прибираємо відступ зверху, щоб кнопки "підскочили" до заголовка */
+    margin-bottom: 20px; /* Залишаємо відступ знизу, щоб не липли до карток */
+    padding: 10px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 30px; /* Округлі кнопки */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Ефект при наведенні */
+.filter-btn:hover {
+    background-color: rgba(255, 213, 0, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Стиль для активної (натиснутої) кнопки */
+.filter-btn.active {
+    background-color: rgb(255, 200, 0);
+    color: #1a1a1a;
+    box-shadow: 0 0 20px rgba(255, 166, 0, 0.5);
+}
+
+/* Додамо трохи відступу для заголовка каталогу */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: rgb(255, 245, 214);
+    margin-top: 20px;
+    -webkit-text-stroke: 1px orange;
+    
+}
+/* Стиль для літаючого елемента */
+.flying-item {
+    position: fixed;
+    z-index: 9999;
+    pointer-events: none; /* Щоб він не заважав клікати */
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid orange;
+    transition: all 0.8s cubic-bezier(0.13, 0.75, 0.35, 1); /* Крива польоту */
+    box-shadow: 0 0 15px orange;
+}
+
+/* Ефект "пульсації" кошика при потраплянні */
+@keyframes jar-bounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+.cart-bounce {
+    animation: jar-bounce 0.4s ease;
+}
+
+/* --- СТИЛІ ФУТЕРА (НИЗ СТОРІНКИ) --- */
+.site-footer {
+    background-color: #1a1a1a; /* Темний фон, як у шапки */
+    color: rgba(255, 255, 255, 0.5); /* Напівпрозорий білий текст */
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 165, 0, 0.2); /* Тонка помаранчева лінія зверху */
+    width: 100%;
+}
+
+.site-footer p {
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* Фонове затінення */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+/* Контентне вікно */
+.modal-content {
+    background-color: #222;
+    margin: 10% auto;
+    padding: 30px;
+    border: 2px solid orange;
+    border-radius: 20px;
+    width: 400px;
+    color: white;
+    position: relative;
+    box-shadow: 0 0 30px rgba(255, 165, 0, 0.2);
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    color: orange;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: orange;
+}
+
+.input-group input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background: #111;
+    color: white;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+.pay-button {
+    width: 100%;
+    padding: 15px;
+    background: orange;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+/* Тимчасово додай це в кінець CSS, щоб побачити, чи воно взагалі малюється */
+#payment-modal {
+    display: none; /* Зміни на block, щоб перевірити візуально */
+}

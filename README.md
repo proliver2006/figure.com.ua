@@ -1,2 +1,2 @@
 # my-figure-shop
-ц
+
